@@ -1,0 +1,83 @@
+// <div class="container">
+//   <button type="button" class="button__color-picker"></button>
+//   <div class="color-picker">
+//     <ul class="color-picker__list">
+//       <li class="color-picker__session"></li>
+//       <li class="color-picker__bgc"></li>
+//     </ul>
+//   </div>
+//   <button type="button" class="button__timer"></button>
+//   <button type="button" class="button__session"></button>
+//   <button type="button" class="button__icon"></button>
+//   <button type="button" class="button__music"></button>
+// </div>
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  width: 414px;
+  height: 100%;
+  outline: 1px red solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  border-radius: 50%;
+//   &__timer {
+//   }
+
+//   &__icon {
+//   }
+
+  &__session {
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+  &__music {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+  }
+
+//   &__color-picker {
+//   }
+}
+
+.session {
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.color-picker {
+  &__wrapper {
+    display: flex;
+    outline: 1px red solid;
+    align-items: center;
+
+    position: absolute;
+    right: -70px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

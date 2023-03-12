@@ -1,0 +1,54 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+li {
+  list-style-type: none;
+}
+
+.container {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  width: 414px;
+  height: 100%;
+  outline: 1px red solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  border-radius: 50%;
+}
+.button__session {
+  padding: 50px;
+  border-radius: 10px;
+}
+.button__music {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+}
+
+.session__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-picker__wrapper {
+  display: flex;
+  outline: 1px red solid;
+  align-items: center;
+  position: absolute;
+  right: -70px;
+}
+.color-picker__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}/*# sourceMappingURL=index.css.map */
