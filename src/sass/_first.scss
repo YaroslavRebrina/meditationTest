@@ -1,41 +1,9 @@
-// <div class="container">
-//   <button type="button" class="button__color-picker"></button>
-//   <div class="color-picker">
-//     <ul class="color-picker__list">
-//       <li class="color-picker__session"></li>
-//       <li class="color-picker__bgc"></li>
-//     </ul>
-//   </div>
-//   <button type="button" class="button__timer"></button>
-//   <button type="button" class="button__session"></button>
-//   <button type="button" class="button__icon"></button>
-//   <button type="button" class="button__music"></button>
-// </div>
-
 li {
   list-style-type: none;
 }
 
-.container {
-  position: absolute;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 20px;
-  width: 414px;
-  height: 100%;
-  outline: 1px red solid;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .button {
   border-radius: 50%;
-//   &__timer {
-//   }
-
-//   &__icon {
-//   }
 
   &__session {
     padding: 50px;
@@ -43,13 +11,43 @@ li {
   }
 
   &__music {
-    position: absolute;
-    bottom: 35px;
-    left: 35px;
+  }
+}
+
+.container {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100vw;
+  height: 100%;
+  outline: 1px red solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-picker {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
   }
 
-//   &__color-picker {
-//   }
+  &__list {
+    position: absolute;
+    right: -90px;
+  }
+}
+
+.button {
+  &__color-picker {
+  }
 }
 
 .session {
@@ -60,24 +58,17 @@ li {
     transform: translate(-50%, -50%);
 
     display: flex;
+    align-items: center;
     gap: 10px;
     flex-direction: column;
-    align-items: center;
   }
 }
 
-.color-picker {
-  &__wrapper {
-    display: flex;
-    outline: 1px red solid;
-    align-items: center;
+.music__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    position: absolute;
-    right: -70px;
-  }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  position: absolute;
+  bottom: 20px;
 }
