@@ -7,7 +7,12 @@ li {
 
   &__session {
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
+
+    @media screen and (max-width: 305px) {
+      border-radius: 5px;
+      padding: 20px;
+    }
   }
 
   &__music {
@@ -15,23 +20,25 @@ li {
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  margin: 0 auto;
-  padding: 20px;
   width: 100vw;
+  height: 100vh;
   max-width: 500px;
-  height: 100%;
+  min-width: 105px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
 
-  outline: 1px red solid;
-  overflow: hidden;
+  outline: 1px solid red;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
+  gap: 100px;
+
+  padding: 10px;
+
+  overflow: hidden;
+  outline: 1px red solid;
 }
 
 .color-picker {
@@ -49,18 +56,8 @@ li {
   }
 }
 
-.button {
-  &__color-picker {
-  }
-}
-
 .session {
   &__wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -72,7 +69,4 @@ li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
-  position: absolute;
-  bottom: 20px;
 }
