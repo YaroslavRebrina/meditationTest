@@ -1,0 +1,22 @@
+.music {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__list {
+    position: absolute !important;
+    // top: 35px;
+    outline: 1px rgb(23, 71, 116) solid;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  &__item {
+    outline: 1px red solid;
+    border-radius: 15px;
+
+    padding: 20px;
+  }
+}

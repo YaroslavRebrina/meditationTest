@@ -1,0 +1,26 @@
+li {
+  list-style-type: none;
+}
+
+.container {
+  height: 100vh;
+  max-width: 500px;
+  min-width: 105px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
+
+  outline: 1px solid red;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  padding: 10px;
+
+  background-color: bisque;
+  overflow: hidden;
+  outline: 1px red solid;
+}

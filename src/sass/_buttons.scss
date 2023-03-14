@@ -1,0 +1,13 @@
+.button {
+  border-radius: 50%;
+
+  &__session {
+    padding: 50px;
+    border-radius: 30px;
+
+    @media screen and (max-width: 305px) {
+      border-radius: 5px;
+      padding: 20px;
+    }
+  }
+}
