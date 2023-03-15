@@ -3,7 +3,13 @@
 
   --main-border-color: #86bdb0;
 
-  --main-icons-fill: rgb(231, 242, 165);
+  --main-icons-fill: rgb(255, 255, 255); // rgb(231, 242, 165)
 
-  --main-button-bg: #5e9f9b;
+  --main-button-bg: linear-gradient(
+    140deg,
+    rgba(30, 169, 23, 0.48679982246804976) 46%,
+    rgba(1, 107, 168, 0.7036064425770308) 84%
+  );
+  --main-button-border: #6ac2ca;
+  
 }

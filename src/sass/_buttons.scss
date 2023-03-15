@@ -2,8 +2,13 @@
   display: flex;
   align-items: center;
   padding: 3px;
-  border: none;
-  background-color: var(--main-button-bg);
+  border: 2px var(--main-button-border) solid;
+  background: var(--main-button-bg);
+  box-shadow: 0px 0px 10px 1px rgba(129, 69, 149, 0.75);
+  transition: box-shadow 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:active {
+    box-shadow: 0px 0px 10px 4px rgba(75, 55, 75, 0.75);
+  }
 }
 
 .button {
