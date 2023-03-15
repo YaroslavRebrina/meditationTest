@@ -19,10 +19,10 @@ li {
   display: flex;
   flex-direction: column;
   gap: 100px;
-
+  border-radius: 30px;
   padding: 10px;
 
-  background-color: bisque;
+  background-color: rgb(156, 203, 136);
   overflow: hidden;
   outline: 1px red solid;
 }
