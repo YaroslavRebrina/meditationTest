@@ -2,11 +2,14 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    position: relative;
+    // position: relative;
+    height: 40px;
+    outline: 1px rebeccapurple solid;
+    overflow: hidden;
   }
 
   &__list {
-    position: absolute !important;
+    position: absolute;
     // top: 35px;
     outline: 1px rgb(23, 71, 116) solid;
     padding-left: 0;
@@ -14,9 +17,17 @@
   }
 
   &__item {
-    outline: 1px red solid;
-    border-radius: 15px;
+    padding: 1px 1px 1px 30px;
 
-    padding: 20px;
+    border-top: 1px red solid;
+  }
+
+  &__author {
+    display: block;
+    
+  }
+
+  &__name {
+    display: block;
   }
 }
