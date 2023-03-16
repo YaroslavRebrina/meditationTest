@@ -1,7 +1,8 @@
-@import './base';
-@import './buttons';
-@import './variables';
-@import './theme';
-@import './session';
-@import './music';
-@import './icons';
+@import './base/base';
+@import './base/variables';
+
+@import './partials/theme';
+@import './partials/session';
+@import './partials/music';
+@import './partials/icons';
+@import './partials/buttons';
