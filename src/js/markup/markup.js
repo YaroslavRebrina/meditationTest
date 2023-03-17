@@ -9,21 +9,21 @@ const colorInfo = {
   buttonSessionColor: localStorage.getItem(BUTTON_SESSION_KEY),
 };
 
-function setItems() {
-  if (
-    localStorage.getItem(BGC_KEY) === null &&
-    localStorage.getItem(BUTTON_SESSION_KEY) === null
-  ) {
-    console.log(1);
-    localStorage.setItem(BGC_KEY, 'green');
-    localStorage.setItem(BUTTON_SESSION_KEY, 'pink');
+// function setItems() {
+//   if (
+//     localStorage.getItem(BGC_KEY) === null &&
+//     localStorage.getItem(BUTTON_SESSION_KEY) === null
+//   ) {
+//     console.log(1);
+//     localStorage.setItem(BGC_KEY, 'green');
+//     localStorage.setItem(BUTTON_SESSION_KEY, 'pink');
 
-    colorInfo.bgcColor = localStorage.getItem(BGC_KEY);
-    colorInfo.buttonSessionColor = localStorage.getItem(BUTTON_SESSION_KEY);
-  }
-}
+//     colorInfo.bgcColor = localStorage.getItem(BGC_KEY);
+//     colorInfo.buttonSessionColor = localStorage.getItem(BUTTON_SESSION_KEY);
+//   }
+// }
 
-setItems();
+// setItems();
 markup(colorInfo.bgcColor, colorInfo.buttonSessionColor);
 
 function markup(bgcColorParam, buttonSessionColor) {
@@ -34,6 +34,9 @@ function markup(bgcColorParam, buttonSessionColor) {
 }
 
 function buttonMarkup(buttonSessionColor) {
+  if (buttonSessionColor === null) {
+    buttonSessionColor = 'pink';
+  }
   let btnColor = buttonSessionColor;
   let sessionBtnColorData = sessionButtonEl.dataset.color;
 
@@ -43,6 +46,9 @@ function buttonMarkup(buttonSessionColor) {
 }
 
 function bgcMarkup(bgcColorParam) {
+  if (bgcColorParam === null) {
+    bgcColorParam = 'green';
+  }
   let bgcColor = bgcColorParam;
   let wrapperColorData = wrapperEl.dataset.color;
 
