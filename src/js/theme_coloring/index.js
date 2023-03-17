@@ -34,8 +34,7 @@ function paletteClose(e) {
 
 // bg paintning
 
-colorsListEl.addEventListener('click', changeBgc);
-colorsListEl.addEventListener('click', changeSessionBtnColor);
+colorsListEl.addEventListener('click', changeColor);
 
 function changeSessionBtnColor(e) {
   if (e.target.classList.contains('session-palette__button')) {
@@ -57,6 +56,11 @@ function changeBgc(e) {
     wrapperEl.classList.replace(`${wrapperColorData}`, `${bgcColor}`);
     return (wrapperEl.dataset.color = bgcColor);
   }
+}
+
+function changeColor(e) {
+  changeSessionBtnColor(e);
+  changeBgc(e);
 
   return;
 }
