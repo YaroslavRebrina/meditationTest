@@ -11,7 +11,7 @@ const colorInfo = {
 
 markup(colorInfo.bgcColor, colorInfo.buttonSessionColor);
 
-function markup(bgcColorParam = 'pink', buttonSessionColor = 'green') {
+function markup(bgcColorParam, buttonSessionColor) {
   buttonMarkup(buttonSessionColor);
   bgcMarkup(bgcColorParam);
 
@@ -19,6 +19,9 @@ function markup(bgcColorParam = 'pink', buttonSessionColor = 'green') {
 }
 
 function buttonMarkup(buttonSessionColor) {
+  if (buttonSessionColor === null) {
+    buttonSessionColor = 'pink';
+  }
   let btnColor = buttonSessionColor;
   let sessionBtnColorData = sessionButtonEl.dataset.color;
 
@@ -28,6 +31,9 @@ function buttonMarkup(buttonSessionColor) {
 }
 
 function bgcMarkup(bgcColorParam) {
+  if (bgcColorParam === null) {
+    bgcColorParam = 'green';
+  }
   let bgcColor = bgcColorParam;
   let wrapperColorData = wrapperEl.dataset.color;
 

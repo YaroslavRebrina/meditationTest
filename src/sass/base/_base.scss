@@ -3,6 +3,7 @@ li {
 }
 
 .container {
+  position: relative;
   font-family: 'PT Sans Caption', sans-serif;
 
   height: 100vh;
@@ -16,8 +17,6 @@ li {
 }
 
 .wrapper {
-
-
   display: flex;
   flex-direction: column;
   gap: 100px;
