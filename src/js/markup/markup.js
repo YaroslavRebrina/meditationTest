@@ -1,6 +1,6 @@
 import { sessionButtonEl } from '../theme_coloring';
 import { wrapperEl } from '../theme_coloring';
-git
+
 const BGC_KEY = 'bgcColor';
 const BUTTON_SESSION_KEY = 'sessionButtonColor';
 
