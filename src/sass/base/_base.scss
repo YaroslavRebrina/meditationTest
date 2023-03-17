@@ -16,17 +16,14 @@ li {
 }
 
 .wrapper {
+
+
   display: flex;
   flex-direction: column;
   gap: 100px;
   border-radius: 30px;
   padding: 10px;
 
-  background: linear-gradient(
-    140deg,
-    rgba(30, 169, 23, 0.48679982246804976) 0%,
-    rgba(1, 168, 97, 0.7036064425770308) 62%
-  );
   overflow: hidden;
   outline: 1px red solid;
 }
