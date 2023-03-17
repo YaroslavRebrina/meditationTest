@@ -1,13 +1,11 @@
-const refs = {
+export const refs = {
   colorsBtnEl: document.querySelector('.button__color'),
   wrapperEl: document.querySelector('.wrapper'),
   colorsListEl: document.querySelector('.theme__list'),
   sessionButtonEl: document.querySelector('.button__session'),
-  // sessionBtnPallete: document.querySelector('.theme__session-palette'),
-  // bgcPallete: document.querySelector('.theme__bgc-palette'),
 };
 
-const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;
+export const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;
 
 colorsBtnEl.addEventListener('click', palleteOpen);
 
@@ -42,7 +40,11 @@ function changeSessionBtnColor(e) {
     let sessionBtnColorData = sessionButtonEl.dataset.color;
 
     sessionButtonEl.classList.replace(`${sessionBtnColorData}`, `${btnColor}`);
-    return (sessionButtonEl.dataset.color = btnColor);
+    sessionButtonEl.dataset.color = btnColor;
+    return localStorage.setItem(
+      'sessionButtonColor',
+      sessionButtonEl.dataset.color
+    );
   }
 
   return;
@@ -54,7 +56,8 @@ function changeBgc(e) {
     let wrapperColorData = wrapperEl.dataset.color;
 
     wrapperEl.classList.replace(`${wrapperColorData}`, `${bgcColor}`);
-    return (wrapperEl.dataset.color = bgcColor);
+    wrapperEl.dataset.color = bgcColor;
+    return localStorage.setItem('bgcColor', wrapperEl.dataset.color);
   }
 }
 
