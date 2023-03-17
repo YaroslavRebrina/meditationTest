@@ -3,14 +3,27 @@ import { wrapperEl } from '../theme_coloring';
 
 const BGC_KEY = 'bgcColor';
 const BUTTON_SESSION_KEY = 'sessionButtonColor';
-const standartColorButton = 'pink';
-const standartColorBgc = 'green';
 
 const colorInfo = {
   bgcColor: localStorage.getItem(BGC_KEY),
   buttonSessionColor: localStorage.getItem(BUTTON_SESSION_KEY),
 };
 
+function setItems() {
+  if (
+    localStorage.getItem(BGC_KEY) === null &&
+    localStorage.getItem(BUTTON_SESSION_KEY) === null
+  ) {
+    console.log(1);
+    localStorage.setItem(BGC_KEY, 'green');
+    localStorage.setItem(BUTTON_SESSION_KEY, 'pink');
+
+    colorInfo.bgcColor = localStorage.getItem(BGC_KEY);
+    colorInfo.buttonSessionColor = localStorage.getItem(BUTTON_SESSION_KEY);
+  }
+}
+
+setItems();
 markup(colorInfo.bgcColor, colorInfo.buttonSessionColor);
 
 function markup(bgcColorParam, buttonSessionColor) {
@@ -21,10 +34,6 @@ function markup(bgcColorParam, buttonSessionColor) {
 }
 
 function buttonMarkup(buttonSessionColor) {
-  console.log(buttonSessionColor);
-  if (buttonSessionColor === null) {
-    buttonSessionColor = standartColorButton;
-  }
   let btnColor = buttonSessionColor;
   let sessionBtnColorData = sessionButtonEl.dataset.color;
 
@@ -34,9 +43,6 @@ function buttonMarkup(buttonSessionColor) {
 }
 
 function bgcMarkup(bgcColorParam) {
-  if (bgcColorParam === null) {
-    bgcColorParam = standartColorBgc;
-  }
   let bgcColor = bgcColorParam;
   let wrapperColorData = wrapperEl.dataset.color;
 
