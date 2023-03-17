@@ -19,6 +19,7 @@ function markup(bgcColorParam, buttonSessionColor) {
 }
 
 function buttonMarkup(buttonSessionColor) {
+  console.log(buttonSessionColor);
   if (buttonSessionColor === null) {
     buttonSessionColor = 'pink';
   }
