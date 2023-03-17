@@ -3,6 +3,8 @@ import { wrapperEl } from '../theme_coloring';
 
 const BGC_KEY = 'bgcColor';
 const BUTTON_SESSION_KEY = 'sessionButtonColor';
+const standartColorButton = 'pink';
+const standartColorBgc = 'green';
 
 const colorInfo = {
   bgcColor: localStorage.getItem(BGC_KEY),
@@ -21,7 +23,7 @@ function markup(bgcColorParam, buttonSessionColor) {
 function buttonMarkup(buttonSessionColor) {
   console.log(buttonSessionColor);
   if (buttonSessionColor === null) {
-    buttonSessionColor = 'pink';
+    buttonSessionColor = standartColorButton;
   }
   let btnColor = buttonSessionColor;
   let sessionBtnColorData = sessionButtonEl.dataset.color;
@@ -33,7 +35,7 @@ function buttonMarkup(buttonSessionColor) {
 
 function bgcMarkup(bgcColorParam) {
   if (bgcColorParam === null) {
-    bgcColorParam = 'green';
+    bgcColorParam = standartColorBgc;
   }
   let bgcColor = bgcColorParam;
   let wrapperColorData = wrapperEl.dataset.color;
