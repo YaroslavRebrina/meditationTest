@@ -29,4 +29,8 @@ li {
 
   overflow: hidden;
   outline: 1px red solid;
+
+  @media screen and (max-width: 450px) {
+    gap: 150px;
+  }
 }
