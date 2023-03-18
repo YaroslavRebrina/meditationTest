@@ -18,7 +18,7 @@ function palleteOpen(e) {
 }
 
 function paletteClose(e) {
-  validClick = e.composedPath().includes(colorsListEl);
+  const validClick = e.composedPath().includes(colorsListEl);
 
   if (validClick) {
     return;
