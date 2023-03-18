@@ -41,7 +41,6 @@ function changeSessionBtnColor(e) {
 
     sessionButtonEl.classList.replace(`${sessionBtnColorData}`, `${btnColor}`);
     sessionButtonEl.dataset.color = btnColor;
-    installedColorBtn = btnColor;
     return localStorage.setItem(
       'sessionButtonColor',
       sessionButtonEl.dataset.color
@@ -58,7 +57,6 @@ function changeBgc(e) {
 
     wrapperEl.classList.replace(`${wrapperColorData}`, `${bgcColor}`);
     wrapperEl.dataset.color = bgcColor;
-    installedColorBg = bgcColor;
     return localStorage.setItem('bgcColor', wrapperEl.dataset.color);
   }
 }
