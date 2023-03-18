@@ -1,5 +1,5 @@
-import { sessionButtonEl } from '../theme_coloring';
-import { wrapperEl } from '../theme_coloring';
+import { refs } from '../theme_coloring/index';
+const { wrapperEl, sessionButtonEl } = refs;
 
 const BGC_KEY = 'bgcColor';
 const BUTTON_SESSION_KEY = 'sessionButtonColor';
@@ -34,9 +34,10 @@ function markup(bgcColorParam, buttonSessionColor) {
 }
 
 function buttonMarkup(buttonSessionColor) {
-  if (buttonSessionColor === null) {
+  if (localStorage.getItem(BUTTON_SESSION_KEY) === null) {
     buttonSessionColor = 'pink';
   }
+
   let btnColor = buttonSessionColor;
   let sessionBtnColorData = sessionButtonEl.dataset.color;
 
@@ -46,7 +47,7 @@ function buttonMarkup(buttonSessionColor) {
 }
 
 function bgcMarkup(bgcColorParam) {
-  if (bgcColorParam === null) {
+  if (localStorage.getItem(BGC_KEY) === null) {
     bgcColorParam = 'green';
   }
   let bgcColor = bgcColorParam;

@@ -5,7 +5,7 @@ export const refs = {
   sessionButtonEl: document.querySelector('.button__session'),
 };
 
-export const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;
+const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;
 
 colorsBtnEl.addEventListener('click', palleteOpen);
 
