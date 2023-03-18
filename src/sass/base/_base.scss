@@ -14,6 +14,10 @@ li {
   padding: 100px;
 
   outline: 1px solid red;
+
+  @media screen and (max-width: 450px) {
+    padding: 100px 30px 30px 30px;
+  }
 }
 
 .wrapper {
