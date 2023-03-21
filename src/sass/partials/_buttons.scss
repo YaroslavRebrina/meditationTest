@@ -42,4 +42,8 @@
   &__icon {
     @extend .button-with-icon;
   }
+
+  &__ask {
+    @extend .button-with-icon;
+  }
 }

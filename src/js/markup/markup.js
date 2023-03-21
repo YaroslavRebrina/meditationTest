@@ -2,7 +2,7 @@ import { refs } from '../theme_coloring/index';
 const { wrapperEl, sessionButtonEl } = refs;
 
 const BGC_KEY = 'bgcColor';
-const BUTTON_SESSION_KEY = 'sessionButtonColor';  
+const BUTTON_SESSION_KEY = 'sessionButtonColor';
 
 createMarkup();
 function createMarkup() {

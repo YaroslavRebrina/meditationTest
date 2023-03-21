@@ -6,3 +6,4 @@ const swiper = new Swiper('.music__wrapper', {
   direction: 'vertical',
   loop: false,
 });
+
