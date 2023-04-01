@@ -3,6 +3,8 @@ export const refs = {
   wrapperEl: document.querySelector('.wrapper'),
   colorsListEl: document.querySelector('.theme__list'),
   sessionButtonEl: document.querySelector('.button__session'),
+  timerRef: document.querySelector('.timer__wrapper'),
+  timerBtnRef: document.querySelector('.button__timer'),
 };
 
 const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;

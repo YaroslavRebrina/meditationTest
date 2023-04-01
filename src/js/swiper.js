@@ -7,3 +7,9 @@ const swiper = new Swiper('.music__wrapper', {
   loop: false,
 });
 
+const swiperMusic = new Swiper('.timer__wrapper', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 4,
+  loop: false,
+});

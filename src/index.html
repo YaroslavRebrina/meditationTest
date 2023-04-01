@@ -15,7 +15,20 @@
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/firts.html"></include>
+    <div class="container">
+      <div class="wrapper green" data-color="green">
+        <!-- theme -->
+        <include src="./partials/theme.html"></include>
+        <!-- form question-->
+        <include src="./partials/question-form.html"></include>
+        <!-- timer -->
+        <include src="./partials/timer.html"></include>
+        <!--session -->
+        <include src="./partials/session.html"></include>
+        <!-- music -->
+        <include src="./partials/music.html"></include>
+      </div>
+    </div>
   </body>
   <script src="./index.js" type="module"></script>
 </html>
