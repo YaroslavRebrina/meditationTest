@@ -6,27 +6,39 @@ export const refs = {
   timerRef: document.querySelector('.timer__wrapper'),
   timerBtnRef: document.querySelector('.button__timer'),
 };
-
-const { colorsBtnEl, colorsListEl, wrapperEl, sessionButtonEl } = refs;
+import { timerClose } from '../timer/timer';
+const {
+  timerBtnRef,
+  colorsBtnEl,
+  colorsListEl,
+  wrapperEl,
+  sessionButtonEl,
+  timerRef,
+} = refs;
 
 colorsBtnEl.addEventListener('click', palleteOpen);
 
 function palleteOpen(e) {
   e.stopPropagation();
-  colorsListEl.style.transform = 'translateX(-190px)';
+  timerRef.classList.remove('timer__shown');
+  colorsListEl.classList.add('theme__list--shown');
+  // colorsListEl.style.transform = 'translateX(-190px)';
 
+  wrapperEl.removeEventListener('click', timerClose);
+  timerBtnRef.removeEventListener('click', timerClose);
   wrapperEl.addEventListener('click', paletteClose);
   colorsBtnEl.addEventListener('click', paletteClose);
 }
 
-function paletteClose(e) {
+export function paletteClose(e) {
   const validClick = e.composedPath().includes(colorsListEl);
 
   if (validClick) {
     return;
   }
-
-  colorsListEl.style.transform = 'translateX(190px)';
+  timerRef.classList.remove('timer__shown');
+  colorsListEl.classList.remove('theme__list--shown');
+  // colorsListEl.style.transform = 'translateX(190px)';
 
   wrapperEl.removeEventListener('click', paletteClose);
   colorsBtnEl.removeEventListener('click', paletteClose);

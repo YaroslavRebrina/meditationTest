@@ -21,10 +21,15 @@
   &__list {
     position: absolute;
     top: 25px;
-    right: -190px;
+    transform: translateX(400px);
+
     padding: 0;
 
     transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &--shown {
+      transform: translateX(110px);
+    }
   }
 
   &__session-palette {
@@ -40,9 +45,8 @@
 }
 
 .session-palette {
-  &__item {
-    
-  }
+  // &__item {
+  // }
   &__button {
     border: 1px wheat solid;
     border-radius: 50%;
@@ -84,8 +88,8 @@
 }
 
 .bgc-palette {
-  &__item {
-  }
+  // &__item {
+  // }
 
   &__button {
     border: 1px wheat solid;
