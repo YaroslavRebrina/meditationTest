@@ -8,6 +8,10 @@
   }
 }
 //for JS
-.session__wrapper__hidden {
-  transform: translateX(260px);
+.session__wrapper__hidden--right {
+  transform: translateX(300px);
+}
+
+.session__wrapper__hidden--left {
+  transform: translateX(-300px);
 }

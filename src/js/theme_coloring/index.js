@@ -5,6 +5,8 @@ export const refs = {
   sessionButtonEl: document.querySelector('.button__session'),
   timerRef: document.querySelector('.timer__wrapper'),
   timerBtnRef: document.querySelector('.button__timer'),
+  settingBtnRef: document.querySelector('.button__settings'),
+  iconBtnRef: document.querySelector('.button__icon'),
 };
 import { timerClose } from '../timer/timer';
 const {
@@ -14,8 +16,14 @@ const {
   wrapperEl,
   sessionButtonEl,
   timerRef,
+  settingBtnRef,
+  iconBtnRef,
 } = refs;
-
+settingBtnRef.addEventListener('click', showSettings);
+function showSettings() {
+  timerBtnRef.classList.toggle('button__timer--shown');
+  iconBtnRef.classList.toggle('button__icon--shown');
+}
 colorsBtnEl.addEventListener('click', palleteOpen);
 
 function palleteOpen(e) {

@@ -25,7 +25,6 @@ export function timerClose(e) {
   }
   colorsListEl.classList.remove('theme__list--shown');
   timerRef.classList.remove('timer__shown');
-  //   timerRef.style.transform = 'translate(-50%, -80px)';
 
   wrapperEl.removeEventListener('click', timerClose);
   timerBtnRef.removeEventListener('click', timerClose);

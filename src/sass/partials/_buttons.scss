@@ -26,6 +26,14 @@
     }
   }
 
+  &__achivments {
+    margin-top: 20px;
+  }
+
+  &__settings {
+    @extend .button-with-icon;
+  }
+
   &__info {
     @extend .button-with-icon;
   }
@@ -37,10 +45,20 @@
   &__timer {
     @extend .button-with-icon;
     padding: 6px;
+    opacity: 0;
+  }
+
+  &__timer--shown {
+    opacity: 1;
   }
 
   &__icon {
     @extend .button-with-icon;
+    opacity: 0;
+  }
+
+  &__icon--shown {
+    opacity: 1;
   }
 
   &__ask {
