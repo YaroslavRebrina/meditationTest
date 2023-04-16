@@ -7,6 +7,7 @@ export const refs = {
   timerBtnRef: document.querySelector('.button__timer'),
   settingBtnRef: document.querySelector('.button__settings'),
   iconBtnRef: document.querySelector('.button__icon'),
+  musicWrapperRef: document.querySelector('.music__wrapper'),
 };
 import { timerClose } from '../timer/timer';
 const {
@@ -18,9 +19,11 @@ const {
   timerRef,
   settingBtnRef,
   iconBtnRef,
+  musicWrapperRef,
 } = refs;
 settingBtnRef.addEventListener('click', showSettings);
 function showSettings() {
+  musicWrapperRef.classList.toggle('music__wrapper--shown');
   timerBtnRef.classList.toggle('button__timer--shown');
   iconBtnRef.classList.toggle('button__icon--shown');
 }

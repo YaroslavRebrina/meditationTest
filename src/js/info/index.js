@@ -4,12 +4,11 @@ const formEl = document.querySelector('.form');
 const profileEl = document.querySelector('.profile');
 const musicEl = document.querySelector('.music__wrapper');
 
-infoBtnEl.addEventListener('click', showInfo);
-
 function showInfo() {
   sessionWrapperEl.classList.toggle('session__wrapper__hidden--right');
   formEl.classList.toggle('form__show');
   musicEl.classList.toggle('session__wrapper__hidden--right');
+  
 }
 // transform: translateX(210px);
 const colorBtnEl = document.querySelector('.button__color');

@@ -1,5 +1,6 @@
 .music {
   &__wrapper {
+    opacity: 0;
     display: flex;
     align-items: center;
     border: 1px #000000 solid;
@@ -34,4 +35,8 @@
       font-weight: 400;
     }
   }
+}
+
+.music__wrapper--shown {
+  opacity: 1;
 }
