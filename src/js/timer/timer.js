@@ -3,7 +3,6 @@ import { paletteClose } from '../theme_coloring';
 
 const { timerRef, timerBtnRef, wrapperEl, colorsListEl, colorsBtnEl } = refs;
 
-console.log(timerRef, timerBtnRef);
 timerBtnRef.addEventListener('click', timerOpen);
 
 function timerOpen(e) {
